@@ -1,0 +1,16 @@
+<title>all</title>
+<h6 id="Wer"></h6>
+<script>
+window.onload=function(){
+        var url = window.location.search;
+        if (url.startsWith('?name=') && url.includes('&')==false){
+            name=url.split('?')
+            name=name.split('=')[1]
+            if (name.trim()!=""){
+                name=name.replace('%20', ' ').replace('+', ' ');
+                if (name.includes(' ')){name=name.split(' ')[0]}
+                else{}
+        }else{}
+        GetElementById("Wer").innerHTML = "Hello, ${name}"
+}
+</script>
